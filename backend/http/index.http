@@ -1,27 +1,13 @@
 @Host = http://localhost:5000
 
 
-# Health check 
+#### Health check 
 GET {{Host}}/ HTTP/1.1
 Content-Type: application/json
 
 ### Search 
-GET {{Host}}/api/search?q=world  HTTP/1.1
+GET {{Host}}/api/search?query=CRM  HTTP/1.1
 Content-Type: application/json
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -30,22 +16,67 @@ POST {{Host}}/seed/companies HTTP/1.1
 Content-Type: application/json
 
 {   
+    "data" :[
+  {
     "name": "Salesforce",
-    "url": "salesforce.com"
+    "url": "https://salesforce.com"
+  },
+  {
+    "name": "Puma",
+    "url": "https://puma.com"
+  },
+  {
+    "name": "Adidas",
+    "url": "https://adidas.com"
+  },
+  {
+    "name": "Purple",
+    "url": "https://purple.com"
+  },
+  {
+    "name": "Cotopaxi",
+    "url": "https://cotopaxi.com"
+  },
+  {
+    "name": "Nike",
+    "url": "https://nike.com"
+  },
+  {
+    "name": "Netflix",
+    "url": "https://netflix.com"
+  },
+  {
+    "name": "Colgate",
+    "url": "https://colgate.com"
+  },
+  {
+    "name": "Valentino",
+    "url": "https://valentino.com"
+  },
+  {
+    "name": "Curology",
+    "url": "https://curology.com"
+  },
+  {
+    "name": "Levis",
+    "url": "https://levis.com"
+  }
+]
 }
+
+
 ####
 POST {{Host}}/seed/ads HTTP/1.1
 Content-Type: application/json
 
 {
-    "companyId":"6349d43e578eab5be29d182c",
+    "companyId":"634ad5e040adf74e6c8bf52d",
     "primaryText":"The world’s leading CRM",
     "headline":"is ready to help you simplify the ",
     "description":"",
     "CTA":"Sign Up",
     "imageUrl":"https://drive.google.com/file/d/17huYmoSHdbgcNqfoO4yYYGIFf8X1243T/view?usp=sharing"
 }
-
 
 ####
 
@@ -54,7 +85,6 @@ Content-Type: application/json
 
 
 ####
-
 GET {{Host}}/seed/companies HTTP/1.1
 Content-Type: application/json
 

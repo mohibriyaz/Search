@@ -14,6 +14,7 @@ export const OTD = (arr) => {
           id: _id,
           primaryText,
           companyName: company?.name,
+          companyUrl: company?.url,
           headline,
           description,
           CTA,
